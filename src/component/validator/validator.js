@@ -13,10 +13,11 @@ class Validator {
     toastr.options.hideMethod = 'slideUp';
     toastr.options.closeMethod = 'slideUp';
     }
-    static showError=function(coomponentId,message){
-        this.setupToastr_();
-        var coomponent = document.getElementById(coomponentId);
-        toastr.error(coomponentId+":"+message);
+    static showError=function(componentId,message){
+        Validator.setupToastr_();
+        var component = document.getElementById(componentId);
+        component.style.backgroundColor="rgba(255,0,0,0.3)";
+        toastr.error(componentId+":"+message);
     };
     static remove=function(){
         toastr.remove();

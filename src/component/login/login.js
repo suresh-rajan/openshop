@@ -55,13 +55,17 @@ static validate= function(){
     onChange(e) {
       const { value, name } = e.target;
       const { user } = this.state;
+      var userName = document.getElementById("user-name");
+      var password = document.getElementById("password");
+      userName.style.backgroundColor="white";
+      password.style.backgroundColor="white"
       user[name] = value;
       this.setState({ user });
     } 
     render() {
       const { user: { email, password } } = this.state;
       const SubmitButton = withRouter(({ history }) => (
-        <button id="submit-button"
+        <button  className="w3-btn w3-teal"
           onClick={() => this.onSubmit(history)}
           type="submit">Login
         </button>
@@ -71,7 +75,6 @@ static validate= function(){
         <div>
            <div id="loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
            <div id = "form-area" className="login w3-animate-zoom">
-           <h3>LOGIN</h3>
           <Input
             id="user-name"
             name="email"

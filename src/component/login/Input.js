@@ -5,7 +5,7 @@ const Input = ({ id,name, value, label, type, onChange }) => (
   <div>
     {label && <label>{label}</label>}
     <div>
-      <input {...{ id,name, value, type, onChange }}/>
+      <input  className="w3-input w3-card w3-section" {...{ id,name, value, type, onChange } } placeholder={name}/>
     </div>
   </div>
 );

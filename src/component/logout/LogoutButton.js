@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import { logout } from '../../service/sessionActions';
 
 const LogoutButton = ({ history, logout }) => (
-  <button
+  <button class="w3-button "
     onClick={() => logout(history)}
   >
     LOGOUT
