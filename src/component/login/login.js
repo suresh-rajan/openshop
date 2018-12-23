@@ -4,7 +4,6 @@ import './css/login.css'
 import sha256 from 'crypto-js/sha256';
 import Validator from '../validator/validator';
 
-
 class Login extends Component {
     static validate= function(){
       var flag= true;
